@@ -3,6 +3,7 @@ import 'package:flutter_database/models/TransactionItem.dart';
 import 'package:flutter_database/providers/TransactionProvider.dart';
 import 'package:flutter_database/screens/FormEditScreen.dart';
 import 'screens/FormScreen.dart';
+import 'screens/test2.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -12,26 +13,30 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) {
-          return TransactionProvider();
-        },)
+        ChangeNotifierProvider(
+          create: (context) {
+            return TransactionProvider();
+          },
+        )
       ],
       child: MaterialApp(
         title: 'My Account',
         theme: ThemeData(
-          
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         home: const MyHomePage(title: 'บัญชีของฉัน'),
+        routes: {
+          '/formScreen': (context) => const FormScreen(),
+          '/test2': (context) => const HeroListPage(),
+          '/heroListPage': (context) => const HeroListPage(),
+        },
       ),
-    ); 
-    
+    );
   }
 }
 
@@ -45,10 +50,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -56,27 +59,37 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context){
-                return const FormScreen();
-              }));
-            }, 
-            icon: const Text("+",
-              style: TextStyle(fontSize: 30.0),))
+              Navigator.pushNamed(context, '/formScreen');
+            },
+            icon: const Text(
+              "+",
+              style: TextStyle(fontSize: 30.0),
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/test2');
+            },
+            icon: const Text(
+              "-",
+              style: TextStyle(fontSize: 30.0),
+            ),
+          ),
         ],
       ),
       body: Consumer(
         builder: (context, TransactionProvider provider, child) {
           provider.initAllData();
           int count = provider.transactions.length;
-          if (count >0){
-            List<TransactionItem> data  = provider.getTransaction();
+          if (count > 0) {
+            List<TransactionItem> data = provider.getTransaction();
             return ListView.builder(
-              itemCount: data.length ,
+              itemCount: data.length,
               itemBuilder: (context, index) {
                 TransactionItem item = provider.transactions[index];
                 return Card(
                   elevation: 10,
-                  margin: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: ListTile(
                     leading: CircleAvatar(
                       radius: 30,
@@ -87,28 +100,31 @@ class _MyHomePageState extends State<MyHomePage> {
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () {
-                        var provider = Provider.of<TransactionProvider>(
-                          context,
-                          listen: false);
+                        var provider = Provider.of<TransactionProvider>(context,
+                            listen: false);
                         provider.deleteData(item);
-                      }),
+                      },
+                    ),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return  FormEditScreen(data: item);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return FormEditScreen(data: item);
                       }));
                     },
                   ),
                 );
-            },);
-          }else{
+              },
+            );
+          } else {
             return const Center(
-              child: Text("No Data.",
+              child: Text(
+                "No Data.",
                 style: TextStyle(fontSize: 30),
               ),
             );
           }
-        },)
+        },
+      ),
     );
-
   }
 }
