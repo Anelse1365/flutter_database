@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Food1Page());
+  runApp(Food2Page());
 }
 
-class Food1Page extends StatelessWidget {
+class Food2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

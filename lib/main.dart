@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -50,16 +50,16 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
         actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, '/test2');
-            },
-            icon: const Text(
-              "+",
-              style: TextStyle(fontSize: 30.0),
-            ),
-          ),
-          // ปุ่ม "ดูแคลอรี่อาหาร"
+          // IconButton(
+          //   onPressed: () {
+          //     Navigator.pushReplacementNamed(context, '/test2');
+          //   },
+          //   icon: const Text(
+          //     "+",
+          //     style: TextStyle(fontSize: 30.0),
+          //   ),
+          // ),
+          // // ปุ่ม "ดูแคลอรี่อาหาร"
           IconButton(
             onPressed: () {
               Navigator.pushNamed(context, '/test2');
@@ -82,18 +82,13 @@ class MyHomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            // แสดงค่าแคลอรี่ทั้งหมดจาก Provider
-            Consumer<TransactionProvider>(
-              builder: (context, provider, child) {
-                return Text(
-                  '${provider.totalCalories}',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple,
-                  ),
-                );
-              },
+            Text(
+              '${provider.totalCalories}',
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
             ),
           ],
         ),

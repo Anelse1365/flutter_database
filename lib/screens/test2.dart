@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'food1.dart'; // Import food1.dart
+import 'food0.dart'; // Import food1.dart
 
 class HeroListPage extends StatelessWidget {
   const HeroListPage({Key? key}) : super(key: key);
@@ -29,6 +30,10 @@ class HeroListPage extends StatelessWidget {
                   if (_contents[index] == 'ขนมกินเล่น') {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Food1Page(),
+                    ));
+                  } else if (_contents[index] == 'ของหวาน') {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Food2Page(), // เพิ่มนี้
                     ));
                   } else {
                     Navigator.of(context).push(MaterialPageRoute(
