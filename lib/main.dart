@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const MyHomePage(title: 'บัญชีของฉัน'),
+        home: const MyHomePage(title: ''),
         routes: {
           '/test2': (context) => const HeroListPage(),
           '/heroListPage': (context) => const HeroListPage(),
@@ -50,16 +50,6 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
         actions: [
-          // IconButton(
-          //   onPressed: () {
-          //     Navigator.pushReplacementNamed(context, '/test2');
-          //   },
-          //   icon: const Text(
-          //     "+",
-          //     style: TextStyle(fontSize: 30.0),
-          //   ),
-          // ),
-          // // ปุ่ม "ดูแคลอรี่อาหาร"
           IconButton(
             onPressed: () {
               Navigator.pushNamed(context, '/test2');
@@ -71,27 +61,46 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Total Calories:',
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'อาหารแคลสูงยอดฮิต',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              '${provider.totalCalories}',
-              style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.deepPurple,
-              ),
+          ),
+          Expanded(
+              child: Image(
+            image: AssetImage('assets/dessert/2.jpg'),
+          )),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Total Calories:',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  '${provider.totalCalories}',
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
