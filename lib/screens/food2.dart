@@ -25,31 +25,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Map<String, dynamic>> foods = [
     {
-      'name': 'เฟรนฟราย',
+      'name': 'เฟรนฟราย (113g)',
       'image':
           'https://image.posttoday.com/media/content/2018/11/28/809833FC1C0A47E58125BB86B868D0B7.png',
-      'calories': 150,
-      'fat': 6,
-      'protein': 2,
+      'calories': 330,
+      'fat': 17,
+      'protein': 5,
     },
     {
-      'name': 'ขนมปังกระเทียม',
+      'name': 'ขนมปังกระเทียม (1 ชิ้น)',
       'image':
           'https://cdn.1112.com/1112/public//images/products/appetizer/116525_4.png',
-      'calories': 100,
-      'per': 1,
-      'fat': 20,
-      'protein': 15,
+      'calories': 85,
+      'fat': 4,
+      'protein': 1,
     },
     {
-      'name': 'ปีกไก่ทอด 1 ชิ้น',
+      'name': 'ปีกไก่ทอด (1 ชิ้น)',
       'image': 'https://i.ytimg.com/vi/60xSNZvr7Ck/maxresdefault.jpg',
       'calories': 90,
       'fat': 15.3,
       'protein': 26.4,
     },
     {
-      'name': 'นักเก็ตทอด 1 ชิ้น',
+      'name': 'นักเก็ตทอด (1 ชิ้น)',
       'image':
           'https://media.istockphoto.com/id/618209540/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%8B%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99.jpg?s=612x612&w=0&k=20&c=jS2w5ffZDdqQutFSNyCX1sU313AmPYYTHqHQ3qwwOO0=',
       'calories': 45,
@@ -57,19 +56,18 @@ class _MyHomePageState extends State<MyHomePage> {
       'protein': 3,
     },
     {
-      'name': 'โรตีธรรมดา 1 แผ่น',
-      'image':
-          'https://www.calforlife.com/image/food/southern-flat-bread-Roti.png',
-      'calories': 198.5,
-      'fat': 10.5,
-      'protein': 0,
+      'name': 'ทาโกะยากิ (1 ลูก)',
+      'image': 'https://img.kapook.com/u/2017/surauch/cooking/n1_9.jpg',
+      'calories': 54,
+      'fat': 2,
+      'protein': 3,
     },
     {
-      'name': 'ไก่ป๊อบ',
+      'name': 'ไก่ป๊อบ (100g)',
       'image': 'https://mpics.mgronline.com/pics/Images/552000011684405.JPEG',
-      'calories': 351.1,
-      'fat': 5,
-      'protein': 8,
+      'calories': 300,
+      'fat': 16,
+      'protein': 15,
     },
     // Add more food items as needed
   ];
