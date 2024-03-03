@@ -134,9 +134,9 @@ class SecondPage extends StatelessWidget {
 }
 
 final List<String> _images = [
-  'https://fit-d.com/image_webp/f?src=./uploads/food/16cca95edc9ab6185c8720bed16ae178.jpg',
   'https://media.istockphoto.com/id/938742222/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%9E%E0%B8%B4%E0%B8%8B%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%82%E0%B8%A3%E0%B8%99%E0%B8%B5.jpg?s=612x612&w=0&k=20&c=C2HzP64oleC_v1f-Ym-akBw0_RSXfq30s3TO_D9gk0o=',
-  'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
+  'https://fit-d.com/image_webp/f?src=./uploads/food/16cca95edc9ab6185c8720bed16ae178.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWPR6bam73DRdBoAan2ntJoAcJgyCgUMB27g&usqp=CAU',
   'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
   'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
   'https://food.mthai.com/app/uploads/2019/11/SW.jpg'
