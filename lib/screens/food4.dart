@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Food2Page());
+  runApp(Food4Page());
 }
 
-class Food2Page extends StatelessWidget {
+class Food4Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('อาหารกินเล่น'),
+        title: Text('ชากาแฟ'),
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

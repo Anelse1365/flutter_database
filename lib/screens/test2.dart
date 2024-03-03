@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'food1.dart'; // Import food1.dart
-import 'food0.dart'; // Import food1.dart
+import 'food2.dart'; // Import food1.dart
+import 'food3.dart'; // Import food1.dart
+import 'food4.dart'; // Import food1.dart
+import 'food5.dart'; // Import food1.dart
+import 'food6.dart'; // Import food1.dart
 
 class HeroListPage extends StatelessWidget {
   const HeroListPage({Key? key}) : super(key: key);
@@ -27,13 +31,29 @@ class HeroListPage extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return InkWell(
                 onTap: () {
-                  if (_contents[index] == 'ขนมกินเล่น') {
+                  if (_contents[index] == 'เมนูข้าว') {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Food1Page(),
                     ));
-                  } else if (_contents[index] == 'ของหวาน') {
+                  } else if (_contents[index] == 'ขนมกินเล่น') {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Food2Page(), // เพิ่มนี้
+                    ));
+                  } else if (_contents[index] == 'ของหวาน') {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Food3Page(), // เพิ่มนี้
+                    ));
+                  } else if (_contents[index] == 'ชากาแฟ') {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Food4Page(), // เพิ่มนี้
+                    ));
+                  } else if (_contents[index] == 'อาหารทะเล') {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Food5Page(), // เพิ่มนี้
+                    ));
+                  } else if (_contents[index] == 'ผักผลไม้') {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Food6Page(), // เพิ่มนี้
                     ));
                   } else {
                     Navigator.of(context).push(MaterialPageRoute(
@@ -123,10 +143,10 @@ final List<String> _images = [
 ];
 
 final List<String> _contents = [
-  'ของหวาน',
+  'เมนูข้าว',
   'ขนมกินเล่น',
+  'ของหวาน',
   'ชากาแฟ',
-  'ข้าว',
-  'Content for item 5',
-  'Content for item 6',
+  'อาหารทะเล',
+  'ผักผลไม้',
 ];
