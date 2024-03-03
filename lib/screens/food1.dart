@@ -26,52 +26,46 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, dynamic>> foods = [
     {
       'name': 'พิซซ่า',
-      'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
+      'image': 'assets/food1/1.jpg',
       'calories': 300,
       'fat': 15,
       'protein': 10,
     },
     {
       'name': 'สเต็กหมู',
-      'image':
-          'https://www.smeleader.com/wp-content/uploads/2019/07/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B9%84%E0%B8%8A%E0%B8%AA%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%81-1.jpg',
+      'image': 'assets/album/1.jpg',
       'calories': 259.1,
       'fat': 4.3,
       'protein': 19.6,
     },
     {
       'name': 'ข้าวผัดไข่',
-      'image':
-          'https://s.isanook.com/wo/0/ud/37/186793/r.jpg?ip/crop/w670h402/q80/jpg',
+      'image': 'assets/food1/2.png',
       'calories': 381.4,
       'fat': 14.1,
       'protein': 12.8,
     },
     {
       'name': 'ข้าวมันไก่',
-      'image':
-          'https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5naLwWtYtNesZaki91wtz8N9CQg7YZvxZMhzjwoOWiUn6p2zikv.jpg',
+      'image': 'assets/food1/4.png',
       'calories': 704.3,
       'fat': 18.8,
       'protein': 42.5,
     },
     {
       'name': 'ข้าวไข่เจียว',
-      'image': 'https://f.ptcdn.info/689/035/000/1442885991-imagejpeg-o.jpg',
+      'image': 'assets/food1/5.jpg',
       'calories': 445,
       'fat': 65,
       'protein': 50,
     },
     {
       'name': 'กะเพราหมูกรอบ',
-      'image':
-          'https://fit-d.com/uploads/food/fe516afdfa8f9672c967bbf014012f04.jpg',
+      'image': 'assets/food1/6.jpg',
       'calories': 753.8,
       'fat': 54,
       'protein': 14.3,
     },
-    // Add more food items as needed
   ];
 
   @override
@@ -90,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              // Handle image tap if needed
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
@@ -99,16 +92,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       return Container(
                         padding: EdgeInsets.all(16.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Align(
                               alignment: Alignment.center,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
+                                child: Image.asset(
                                   foods[index]['image'],
                                   width: 180,
-                                  height: 100,
+                                  height: 120,
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -129,32 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 'Calories: ${foods[index]['calories']}',
                                 style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.grey,
+                                  fontSize: 18.0,
+                                  color: const Color.fromARGB(255, 0, 0, 0),
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: Alignment.center,
-                              child: Text(
-                                'Fat: ${foods[index]['fat']}g',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.center,
-                              child: Text(
-                                'Protein: ${foods[index]['protein']}g',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 16.0),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -201,16 +173,17 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Align(
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.network(
+                    child: Image.asset(
                       foods[index]['image'],
-                      width: 180, //ขนาดตัวอย่าง
-                      height: 120, //ขนาดตัวอย่าง
+                      width: 180,
+                      height: 120,
                       fit: BoxFit.cover,
                     ),
                   ),
