@@ -26,8 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, dynamic>> foods = [
     {
       'name': 'อเมริกาโน่ (1 แก้ว)',
-      'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/7e137e46cb8892d390ec2f30cdd17c9a.jpg',
+      'image': 'assets/drinks/1_Americano.jpeg',
       'calories': 370.7,
       'fat': 65,
       'protein': 50,
