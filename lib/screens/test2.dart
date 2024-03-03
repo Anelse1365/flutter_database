@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'food1.dart'; // Import food1.dart
-import 'food2.dart'; // Import food1.dart
-import 'food3.dart'; // Import food1.dart
-import 'food4.dart'; // Import food1.dart
-import 'food5.dart'; // Import food1.dart
-import 'food6.dart'; // Import food1.dart
+import 'food2.dart'; // Import food2.dart
+import 'food3.dart'; // Import food3.dart
+import 'food4.dart'; // Import food4.dart
+import 'food5.dart'; // Import food5.dart
+import 'food6.dart'; // Import food6.dart
 
 class HeroListPage extends StatelessWidget {
   const HeroListPage({Key? key}) : super(key: key);
@@ -37,23 +37,23 @@ class HeroListPage extends StatelessWidget {
                     ));
                   } else if (_contents[index] == 'ขนมกินเล่น') {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Food2Page(), // เพิ่มนี้
+                      builder: (context) => Food2Page(),
                     ));
                   } else if (_contents[index] == 'ของหวาน') {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Food3Page(), // เพิ่มนี้
+                      builder: (context) => Food3Page(),
                     ));
                   } else if (_contents[index] == 'ชากาแฟ') {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Food4Page(), // เพิ่มนี้
+                      builder: (context) => Food4Page(),
                     ));
                   } else if (_contents[index] == 'อาหารทะเล') {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Food5Page(), // เพิ่มนี้
+                      builder: (context) => Food5Page(),
                     ));
                   } else if (_contents[index] == 'ผักผลไม้') {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Food6Page(), // เพิ่มนี้
+                      builder: (context) => Food6Page(),
                     ));
                   } else {
                     Navigator.of(context).push(MaterialPageRoute(
@@ -72,9 +72,11 @@ class HeroListPage extends StatelessWidget {
                         tag: index,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
+                          child: Image.asset(
                             _images[index],
                             width: 200,
+                            height: 150,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -116,7 +118,12 @@ class SecondPage extends StatelessWidget {
                 tag: heroTag,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.network(_images[heroTag]),
+                  child: Image.asset(
+                    _images[heroTag],
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -134,12 +141,12 @@ class SecondPage extends StatelessWidget {
 }
 
 final List<String> _images = [
-  'https://fit-d.com/image_webp/f?src=./uploads/food/16cca95edc9ab6185c8720bed16ae178.jpg',
-  'https://media.istockphoto.com/id/938742222/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%9E%E0%B8%B4%E0%B8%8B%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%82%E0%B8%A3%E0%B8%99%E0%B8%B5.jpg?s=612x612&w=0&k=20&c=C2HzP64oleC_v1f-Ym-akBw0_RSXfq30s3TO_D9gk0o=',
-  'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
-  'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
-  'https://food.mthai.com/app/uploads/2019/11/SW.jpg',
-  'https://food.mthai.com/app/uploads/2019/11/SW.jpg'
+  'assets/album/1.jpg',
+  'assets/dessert/2.jpg',
+  'assets/dessert/2.jpg',
+  'assets/dessert/2.jpg',
+  'assets/dessert/2.jpg',
+  'assets/dessert/2.jpg'
 ];
 
 final List<String> _contents = [
