@@ -26,46 +26,42 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, dynamic>> foods = [
     {
       'name': 'ช็อคโกแลตเค้ก (1 ชิ้น)',
-      'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/7e137e46cb8892d390ec2f30cdd17c9a.jpg',
+      'image': 'assets/dessert/1_Chocolatecake.jpg',
       'calories': 370.7,
       'fat': 65,
       'protein': 50,
     },
     {
       'name': 'ไอศครีมกะทิ (1 โคน)',
-      'image':
-          'https://e7.pngegg.com/pngimages/527/347/png-clipart-ice-cream-cones-chocolate-ice-cream-milkshake-watermelon-ice-cream-cream-food.png',
+      'image': 'assets/dessert/2_Iceream.png',
       'calories': 161.2,
       'fat': 11.8,
       'protein': 1.2,
     },
     {
       'name': 'ปังโทส (1 ชิ้น)',
-      'image':
-          'https://th-images.hellomagazine.com/wp-content/uploads/2023/02/17124934/%E0%B8%AE%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B5%E0%B9%82%E0%B8%97%E0%B8%AA%E0%B8%95%E0%B9%8C_f.jpg?tr=w-1200,h-900',
+      'image': 'assets/dessert/3_pangtos.jpg',
       'calories': 855,
       'fat': 43,
       'protein': 14,
     },
     {
       'name': 'บิงซูสตอเบอรี่ (1 ถ้วย)',
-      'image': 'https://s.isanook.com/he/0/ud/0/3985/1.jpg',
+      'image': 'assets/dessert/4_bingsu.jpg',
       'calories': 912,
       'fat': 32,
       'protein': 19,
     },
     {
       'name': 'โรตีธรรมดา (1 แผ่น)',
-      'image':
-          'https://www.calforlife.com/image/food/southern-flat-bread-Roti.png',
+      'image': 'assets/dessert/5_rotee.png',
       'calories': 198.5,
       'fat': 10.5,
       'protein': 0,
     },
     {
       'name': 'วาฟเฟิล (1 ชิ้น)',
-      'image': 'https://i.ytimg.com/vi/KyLm1wunLmg/maxresdefault.jpg',
+      'image': 'assets/dessert/6_waffle.jpg',
       'calories': 291,
       'fat': 34.2,
       'protein': 13.9,
@@ -104,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               alignment: Alignment.center,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
+                                child: Image.asset(
                                   foods[index]['image'],
                                   width: 180,
                                   height: 100,
@@ -206,10 +202,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.network(
+                    child: Image.asset(
                       foods[index]['image'],
-                      width: 180, //ขนาดตัวอย่าง
-                      height: 120, //ขนาดตัวอย่าง
+                      width: 180,
+                      height: 120,
                       fit: BoxFit.cover,
                     ),
                   ),
