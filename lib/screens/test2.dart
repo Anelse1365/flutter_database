@@ -120,7 +120,7 @@ class SecondPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
                     _images[heroTag],
-                    width: 150,
+                    width: 200,
                     height: 150,
                     fit: BoxFit.cover,
                   ),
