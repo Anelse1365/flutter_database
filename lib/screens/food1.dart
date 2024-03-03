@@ -33,44 +33,43 @@ class _MyHomePageState extends State<MyHomePage> {
       'protein': 10,
     },
     {
-      'name': 'ขนมปัง',
+      'name': 'สเต็กหมู',
       'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-      'calories': 500,
-      'fat': 20,
-      'protein': 15,
+          'https://www.smeleader.com/wp-content/uploads/2019/07/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B9%84%E0%B8%8A%E0%B8%AA%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%81-1.jpg',
+      'calories': 259.1,
+      'fat': 4.3,
+      'protein': 19.6,
     },
     {
-      'name': 'ชื่อภาพ 3',
+      'name': 'ข้าวผัดไข่',
       'image':
           'https://s.isanook.com/wo/0/ud/37/186793/r.jpg?ip/crop/w670h402/q80/jpg',
-      'calories': 100,
-      'fat': 5,
-      'protein': 8,
+      'calories': 381.4,
+      'fat': 14.1,
+      'protein': 12.8,
     },
     {
-      'name': 'ชื่อภาพ 4',
+      'name': 'ข้าวมันไก่',
       'image':
           'https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5naLwWtYtNesZaki91wtz8N9CQg7YZvxZMhzjwoOWiUn6p2zikv.jpg',
-      'calories': 200,
-      'fat': 10,
-      'protein': 12,
+      'calories': 704.3,
+      'fat': 18.8,
+      'protein': 42.5,
     },
     {
-      'name': 'ชื่อภาพ 5',
-      'image':
-          'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-      'calories': 300,
-      'fat': 15,
-      'protein': 10,
+      'name': 'ข้าวไข่เจียว',
+      'image': 'https://f.ptcdn.info/689/035/000/1442885991-imagejpeg-o.jpg',
+      'calories': 445,
+      'fat': 65,
+      'protein': 50,
     },
     {
-      'name': 'ชื่อภาพ 6',
+      'name': 'กะเพราหมูกรอบ',
       'image':
-          'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-      'calories': 100,
-      'fat': 5,
-      'protein': 8,
+          'https://fit-d.com/uploads/food/fe516afdfa8f9672c967bbf014012f04.jpg',
+      'calories': 753.8,
+      'fat': 54,
+      'protein': 14.3,
     },
     // Add more food items as needed
   ];

@@ -25,50 +25,49 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Map<String, dynamic>> foods = [
     {
-      'name': 'พิซซ่า',
+      'name': 'เฟรนฟราย',
       'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-      'calories': 300,
-      'fat': 15,
-      'protein': 10,
+          'https://image.posttoday.com/media/content/2018/11/28/809833FC1C0A47E58125BB86B868D0B7.png',
+      'calories': 150,
+      'fat': 6,
+      'protein': 2,
     },
     {
-      'name': 'ขนมปัง',
+      'name': 'ขนมปังกระเทียม',
       'image':
-          'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-      'calories': 500,
+          'https://cdn.1112.com/1112/public//images/products/appetizer/116525_4.png',
+      'calories': 100,
+      'per': 1,
       'fat': 20,
       'protein': 15,
     },
     {
-      'name': 'ชื่อภาพ 3',
-      'image':
-          'https://s.isanook.com/wo/0/ud/37/186793/r.jpg?ip/crop/w670h402/q80/jpg',
-      'calories': 100,
-      'fat': 5,
-      'protein': 8,
+      'name': 'ปีกไก่ทอด 1 ชิ้น',
+      'image': 'https://i.ytimg.com/vi/60xSNZvr7Ck/maxresdefault.jpg',
+      'calories': 90,
+      'fat': 15.3,
+      'protein': 26.4,
     },
     {
-      'name': 'ชื่อภาพ 4',
+      'name': 'นักเก็ตทอด 1 ชิ้น',
       'image':
-          'https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5naLwWtYtNesZaki91wtz8N9CQg7YZvxZMhzjwoOWiUn6p2zikv.jpg',
-      'calories': 200,
-      'fat': 10,
-      'protein': 12,
+          'https://media.istockphoto.com/id/618209540/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%8B%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99.jpg?s=612x612&w=0&k=20&c=jS2w5ffZDdqQutFSNyCX1sU313AmPYYTHqHQ3qwwOO0=',
+      'calories': 45,
+      'fat': 3,
+      'protein': 3,
     },
     {
-      'name': 'ชื่อภาพ 5',
+      'name': 'โรตีธรรมดา 1 แผ่น',
       'image':
-          'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-      'calories': 300,
-      'fat': 15,
-      'protein': 10,
+          'https://www.calforlife.com/image/food/southern-flat-bread-Roti.png',
+      'calories': 198.5,
+      'fat': 10.5,
+      'protein': 0,
     },
     {
-      'name': 'ชื่อภาพ 6',
-      'image':
-          'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-      'calories': 100,
+      'name': 'ไก่ป๊อบ',
+      'image': 'https://mpics.mgronline.com/pics/Images/552000011684405.JPEG',
+      'calories': 351.1,
       'fat': 5,
       'protein': 8,
     },

@@ -31,7 +31,7 @@ class HeroListPage extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return InkWell(
                 onTap: () {
-                  if (_contents[index] == 'เมนูข้าว') {
+                  if (_contents[index] == 'เมนูอาหารหลัก') {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Food1Page(),
                     ));
@@ -143,7 +143,7 @@ final List<String> _images = [
 ];
 
 final List<String> _contents = [
-  'เมนูข้าว',
+  'เมนูอาหารหลัก',
   'ขนมกินเล่น',
   'ของหวาน',
   'ชากาแฟ',
