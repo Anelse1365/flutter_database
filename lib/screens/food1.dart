@@ -107,6 +107,26 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             const SizedBox(height: 4.0),
+                            // Align(
+                            //   alignment: Alignment.center,
+                            //   child: Text(
+                            //     foods[index]['name'],
+                            //     style: TextStyle(
+                            //       fontSize: 16.0,
+                            //       fontWeight: FontWeight.bold,
+                            //     ),
+                            //   ),
+                            // ),
+                            // Align(
+                            //   alignment: Alignment.center,
+                            //   child: Text(
+                            //     'Calories: ${foods[index]['calories']}',
+                            //     style: TextStyle(
+                            //       fontSize: 18.0,
+                            //       color: const Color.fromARGB(255, 0, 0, 0),
+                            //     ),
+                            //   ),
+                            // ),
                             Align(
                               alignment: Alignment.center,
                               child: Text(
@@ -122,8 +142,28 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 'Calories: ${foods[index]['calories']}',
                                 style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: const Color.fromARGB(255, 0, 0, 0),
+                                  fontSize: 20.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Fat: ${foods[index]['fat']}g',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Protein: ${foods[index]['protein']}g',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.grey,
                                 ),
                               ),
                             ),
