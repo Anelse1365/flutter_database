@@ -142,11 +142,11 @@ class SecondPage extends StatelessWidget {
 
 final List<String> _images = [
   'assets/album/1.jpg',
-  'assets/dessert/2.jpg',
-  'assets/dessert/2.jpg',
-  'assets/dessert/2.jpg',
-  'assets/dessert/2.jpg',
-  'assets/dessert/2.jpg'
+  'assets/album/2.jpg',
+  'assets/album/3.jpg',
+  'assets/album/4.png',
+  'assets/album/5.jpg',
+  'assets/album/6.jpg',
 ];
 
 final List<String> _contents = [
