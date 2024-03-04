@@ -33,38 +33,35 @@ class _MyHomePageState extends State<MyHomePage> {
     },
     {
       'name': 'เอสเปรสโซ่ (1 แก้ว)',
-      'image':
-          'https://e7.pngegg.com/pngimages/527/347/png-clipart-ice-cream-cones-chocolate-ice-cream-milkshake-watermelon-ice-cream-cream-food.png',
+      'image': 'assets/drinks/2_Espresso.jpg',
       'calories': 161.2,
       'fat': 11.8,
       'protein': 1.2,
     },
     {
       'name': 'ชาเย็น/ชาเย็น (1 แก้ว)',
-      'image':
-          'https://th-images.hellomagazine.com/wp-content/uploads/2023/02/17124934/%E0%B8%AE%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B5%E0%B9%82%E0%B8%97%E0%B8%AA%E0%B8%95%E0%B9%8C_f.jpg?tr=w-1200,h-900',
+      'image': 'assets/drinks/3_Thaitea.jpeg',
       'calories': 855,
       'fat': 43,
       'protein': 14,
     },
     {
       'name': 'โกโก้ (1 แก้ว)',
-      'image': 'https://s.isanook.com/he/0/ud/0/3985/1.jpg',
+      'image': 'assets/drinks/4_Coco.jpg',
       'calories': 912,
       'fat': 32,
       'protein': 19,
     },
     {
       'name': 'ชาเขียว (1 แก้ว)',
-      'image':
-          'https://www.calforlife.com/image/food/southern-flat-bread-Roti.png',
+      'image': 'assets/drinks/5_Greentea.jpg',
       'calories': 198.5,
       'fat': 10.5,
       'protein': 0,
     },
     {
       'name': 'นมเย็น/นมชมพู (1 แก้ว)',
-      'image': 'https://i.ytimg.com/vi/KyLm1wunLmg/maxresdefault.jpg',
+      'image': 'assets/drinks/6_Pinkmilk.jpg',
       'calories': 291,
       'fat': 34.2,
       'protein': 13.9,
@@ -103,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               alignment: Alignment.center,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
+                                child: Image.asset(
                                   foods[index]['image'],
                                   width: 180,
                                   height: 100,
@@ -205,10 +202,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.network(
+                    child: Image.asset(
                       foods[index]['image'],
-                      width: 180, //ขนาดตัวอย่าง
-                      height: 120, //ขนาดตัวอย่าง
+                      width: 180,
+                      height: 120,
                       fit: BoxFit.cover,
                     ),
                   ),
