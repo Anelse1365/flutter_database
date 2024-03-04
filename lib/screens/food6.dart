@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, dynamic>> foods = [
     {
       'name': 'มะม่วง (1 ลูก)',
-      'image': 'assets/Fruits_Vegatables/1_mango.jpg',
+      'image': 'assets/Fruits_Vegetables/1_mango.jpg',
       'calories': 67,
       'fat': 3.6,
       'protein': 0.5,
