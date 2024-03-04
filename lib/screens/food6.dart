@@ -19,36 +19,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int totalCalories = 0;
+  num totalCalories = 0;
+  num totalFat = 0;
+  num totalProtein = 0;
 
-  final List<String> imageUrls = [
-    'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-    'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-    'https://fit-d.com/image_webp/f?src=./uploads/food/210ffe4c2b61582368d6d0eeafe6da65.jpg',
-    'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-    'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-    'https://www.thaismescenter.com/wp-content/uploads/2020/02/1513.jpg',
-    // Add more image URLs as needed
-  ];
-
-  final List<String> imageNames = [
-    'พิซซ่า',
-    'ขนมปัง',
-    'ชื่อภาพ 3',
-    'ชื่อภาพ 4',
-    'ชื่อภาพ 5',
-    'ชื่อภาพ 6',
-    // Add more image names as needed
-  ];
-
-  final List<String> imageDescriptions = [
-    '300 แคล',
-    '500 แคล',
-    '100 แคล',
-    '200 แคล',
-    '300 แคล',
-    '100 แคล',
-    // Add more image descriptions as needed
+  final List<Map<String, dynamic>> foods = [
+    {
+      'name': 'มะม่วง (1 ลูก)',
+      'image': 'assets/Fruits_Vegetables/1_mango.jpg',
+      'calories': 67,
+      'fat': 3.6,
+      'protein': 0.5,
+    },
+    {
+      'name': 'กล้วยหอม (1 ลูก)',
+      'image': 'assets/Fruits_Vegatables/2_banana.jpg',
+      'calories': 132,
+      'fat': 0,
+      'protein': 1,
+    },
+    {
+      'name': 'แตงโม (1 ชิ้น)',
+      'image': 'assets/Fruits_Vegatables/3_watermalon.jpg',
+      'calories': 30,
+      'fat': 0.2,
+      'protein': 0.6,
+    },
+    {
+      'name': 'แอปเปิล (1 ชิ้น)',
+      'image': 'assets/Fruits_Vegatables/4_apple.jpg',
+      'calories': 57,
+      'fat': 01,
+      'protein': 0.3,
+    },
+    {
+      'name': 'องุ่น (1 พวง)',
+      'image': 'assets/Fruits_Vegatables/5_graves.jpg',
+      'calories': 67,
+      'fat': 0,
+      'protein': 0.6,
+    },
+    {
+      'name': 'มังคุต (1 ลูก)',
+      'image': 'assets/Fruits_Vegatables/6_mangosteen.jpg',
+      'calories': 60,
+      'fat': 0.40,
+      'protein': 0.60,
+    },
+    // Add more food items as needed
   ];
 
   @override
@@ -63,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisSpacing: 8.0,
           mainAxisSpacing: 8.0,
         ),
-        itemCount: imageUrls.length,
+        itemCount: foods.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -82,8 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               alignment: Alignment.center,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  imageUrls[index],
+                                child: Image.asset(
+                                  foods[index]['image'],
+                                  width: 180,
+                                  height: 100,
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -92,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Align(
                               alignment: Alignment.center,
                               child: Text(
-                                imageNames[index],
+                                foods[index]['name'],
                                 style: TextStyle(
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.bold,
@@ -102,9 +122,29 @@ class _MyHomePageState extends State<MyHomePage> {
                             Align(
                               alignment: Alignment.center,
                               child: Text(
-                                imageDescriptions[index],
+                                'Calories: ${foods[index]['calories']}',
                                 style: TextStyle(
-                                  fontSize: 14.0,
+                                  fontSize: 20.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Fat: ${foods[index]['fat']}g',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Protein: ${foods[index]['protein']}g',
+                                style: TextStyle(
+                                  fontSize: 20.0,
                                   color: Colors.grey,
                                 ),
                               ),
@@ -116,9 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ElevatedButton(
                                   onPressed: () {
                                     setState(() {
-                                      totalCalories += int.parse(
-                                          imageDescriptions[index]
-                                              .split(' ')[0]);
+                                      totalCalories += foods[index]['calories'];
+                                      totalFat += foods[index]['fat'];
+                                      totalProtein += foods[index]['protein'];
                                     });
                                   },
                                   child: Text('Add Calories'),
@@ -128,6 +168,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPressed: () {
                                     setState(() {
                                       totalCalories = 0;
+                                      totalFat = 0;
+                                      totalProtein = 0;
                                     });
                                   },
                                   child: Text('Clear'),
@@ -138,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Align(
                               alignment: Alignment.center,
                               child: Text(
-                                'Calories: $totalCalories',
+                                'Calories: $totalCalories, Fat: $totalFat g, Protein: $totalProtein g',
                                 style: TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
@@ -160,8 +202,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.network(
-                      imageUrls[index],
+                    child: Image.asset(
+                      foods[index]['image'],
+                      width: 180,
+                      height: 120,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -170,7 +214,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    imageNames[index],
+                    foods[index]['name'],
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
@@ -180,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    imageDescriptions[index],
+                    'Calories: ${foods[index]['calories']}',
                     style: TextStyle(
                       fontSize: 18.0,
                       color: const Color.fromARGB(255, 0, 0, 0),
