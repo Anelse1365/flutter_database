@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('เมนูข้าว'),
+        title: Text('เมนูอาหารหลัก'),
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -107,26 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             const SizedBox(height: 4.0),
-                            // Align(
-                            //   alignment: Alignment.center,
-                            //   child: Text(
-                            //     foods[index]['name'],
-                            //     style: TextStyle(
-                            //       fontSize: 16.0,
-                            //       fontWeight: FontWeight.bold,
-                            //     ),
-                            //   ),
-                            // ),
-                            // Align(
-                            //   alignment: Alignment.center,
-                            //   child: Text(
-                            //     'Calories: ${foods[index]['calories']}',
-                            //     style: TextStyle(
-                            //       fontSize: 18.0,
-                            //       color: const Color.fromARGB(255, 0, 0, 0),
-                            //     ),
-                            //   ),
-                            // ),
                             Align(
                               alignment: Alignment.center,
                               child: Text(
@@ -253,6 +233,87 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (context) {
+              String foodName = '';
+              String imageUrl = '';
+              double calories = 0;
+              double fat = 0;
+              double protein = 0;
+
+              return AlertDialog(
+                title: Text('Add New Food'),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Food Name'),
+                      onChanged: (value) {
+                        foodName = value;
+                      },
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Image URL'),
+                      onChanged: (value) {
+                        imageUrl = value;
+                      },
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Calories'),
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) {
+                        calories = double.parse(value);
+                      },
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Fat (g)'),
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) {
+                        fat = double.parse(value);
+                      },
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Protein (g)'),
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) {
+                        protein = double.parse(value);
+                      },
+                    ),
+                  ],
+                ),
+                actions: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text('Cancel'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Add new food to the list
+                      setState(() {
+                        foods.add({
+                          'name': foodName,
+                          'image': imageUrl,
+                          'calories': calories,
+                          'fat': fat,
+                          'protein': protein,
+                        });
+                      });
+                      Navigator.pop(context);
+                    },
+                    child: Text('Add'),
+                  ),
+                ],
+              );
+            },
+          );
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
