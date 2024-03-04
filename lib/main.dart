@@ -37,43 +37,48 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container(
-            height: size.height * 0.35,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 120, 194, 255),
-            ),
-            alignment: Alignment.bottomLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Check Food Calories",
-                    style: TextStyle(
-                      fontSize: 24.0,
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  const SizedBox(height: 8.0),
-                  Text(
-                    "อาหารแคลเยอะยอดฮิต",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          Image.asset(
+            'assets/album/1.jpg',
+            height: size.height * 1,
+            width: size.width,
+            fit: BoxFit.cover,
+            color: Colors.black.withOpacity(0.45),
+            colorBlendMode: BlendMode.darken,
           ),
           Positioned(
-            bottom: 360,
-            left: 0,
-            child: ImageSlider(),
+            bottom: size.height * 0.4, // ปรับตำแหน่ง Text ตามต้องการ
+            left: 20.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'CHECK ',
+                  style: TextStyle(
+                    fontSize: 50.0, //size text
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 0), // เพิ่มระยะห่างระหว่างข้อความ
+                Text(
+                  'FOOD ',
+                  style: TextStyle(
+                    fontSize: 50.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 0),
+                Text(
+                  'CALORIES ',
+                  style: TextStyle(
+                    fontSize: 50.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 600.0),
@@ -83,14 +88,15 @@ class MyHomePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/test2');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 156, 141, 255),
+                  backgroundColor: Color.fromARGB(255, 253, 114, 156),
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 ),
                 child: Text(
                   "ดูแคลอรี่อาหาร",
                   style: TextStyle(
-                    fontSize: 14.0,
+                    fontSize: 16.0,
                     color: Colors.white,
+                    // fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -102,21 +108,41 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class ImageSlider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150, // ปรับความสูงของ Slide ตามต้องการ
-      width: MediaQuery.of(context).size.width,
-      child: PageView.builder(
-        itemCount: 3, // จำนวนรูปภาพ
-        itemBuilder: (context, index) {
-          return Image.asset(
-            'assets/album/${index + 1}.jpg',
-            fit: BoxFit.cover,
-          );
-        },
-      ),
-    );
-  }
-}
+
+// class ImageSlider extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 150, // ปรับความสูงของ Slide ตามต้องการ
+//       width: MediaQuery.of(context).size.width,
+//       child: PageView.builder(
+//         itemCount: 3, // จำนวนรูปภาพ
+//         itemBuilder: (context, index) {
+//           return Image.asset(
+//             'assets/album/${index + 1}.jpg',
+//             fit: BoxFit.cover,
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }
+
+// class ImageSlider2 extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 150, // ปรับความสูงของ Slide ตามต้องการ
+//       width: MediaQuery.of(context).size.width,
+//       child: PageView.builder(
+//         itemCount: 3, // จำนวนรูปภาพ
+//         itemBuilder: (context, index) {
+//           return Image.asset(
+//             'assets/album/${index + 1}.jpg',
+//             fit: BoxFit.cover,
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }
