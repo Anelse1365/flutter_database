@@ -54,7 +54,7 @@ class MyHomePage extends StatelessWidget {
                 Text(
                   'CHECK ',
                   style: TextStyle(
-                    fontSize: 50.0, //size text
+                    fontSize: 60.0, //size text
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
@@ -63,7 +63,7 @@ class MyHomePage extends StatelessWidget {
                 Text(
                   'FOOD ',
                   style: TextStyle(
-                    fontSize: 50.0,
+                    fontSize: 60.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
@@ -72,7 +72,7 @@ class MyHomePage extends StatelessWidget {
                 Text(
                   'CALORIES ',
                   style: TextStyle(
-                    fontSize: 50.0,
+                    fontSize: 60.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),

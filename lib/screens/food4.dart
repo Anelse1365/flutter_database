@@ -8,6 +8,7 @@ class Food4Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -65,6 +66,20 @@ class _MyHomePageState extends State<MyHomePage> {
       'calories': 291,
       'fat': 34.2,
       'protein': 13.9,
+    },
+    {
+      'name': 'ลาเต้ (1 แก้ว)',
+      'image': 'assets/drinks/8.jpg',
+      'calories': 165,
+      'fat': 8,
+      'protein': 4.7,
+    },
+    {
+      'name': 'คาปูชิโน่ (1 แก้ว)',
+      'image': 'assets/drinks/7.jpg',
+      'calories': 574,
+      'fat': 11.1,
+      'protein': 4.8,
     },
     // Add more food items as needed
   ];

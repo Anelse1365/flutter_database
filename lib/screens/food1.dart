@@ -8,6 +8,7 @@ class Food1Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -60,11 +61,25 @@ class _MyHomePageState extends State<MyHomePage> {
       'protein': 50,
     },
     {
+      'name': 'ข้าวยำไก่',
+      'image': 'assets/food1/7.jpg',
+      'calories': 640,
+      'fat': 18,
+      'protein': 25,
+    },
+    {
       'name': 'กะเพราหมูกรอบ',
       'image': 'assets/food1/6.jpg',
       'calories': 753.8,
       'fat': 54,
       'protein': 14.3,
+    },
+    {
+      'name': 'ข้าวหมูแดง',
+      'image': 'assets/food1/8.jpg',
+      'calories': 541,
+      'fat': 18,
+      'protein': 19,
     },
   ];
 
@@ -72,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('เมนูข้าว'),
+        title: Text('อาหารจารหลัก'),
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
