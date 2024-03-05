@@ -87,11 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
         title: Text('อาหารจารหลัก'),
-=======
-        title: Text('เมนูอาหารหลัก'),
->>>>>>> 81cd34a3d99b4bdde84642a33c6e0374d76b352a
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
